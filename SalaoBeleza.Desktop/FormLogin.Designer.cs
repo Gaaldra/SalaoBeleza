@@ -134,9 +134,10 @@ partial class FormLogin
         // chkLembrar
         // 
         chkLembrar.AutoSize = true;
+        chkLembrar.Font = new Font("Segoe UI", 12F);
         chkLembrar.Location = new Point(7, 270);
         chkLembrar.Name = "chkLembrar";
-        chkLembrar.Size = new Size(97, 19);
+        chkLembrar.Size = new Size(123, 25);
         chkLembrar.TabIndex = 7;
         chkLembrar.Text = "Lembrar-me?";
         chkLembrar.UseVisualStyleBackColor = true;
