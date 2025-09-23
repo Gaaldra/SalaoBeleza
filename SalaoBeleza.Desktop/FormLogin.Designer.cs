@@ -148,7 +148,7 @@ partial class FormLogin
         txtSenha.Font = new Font("Segoe UI", 12F);
         txtSenha.Location = new Point(7, 235);
         txtSenha.Name = "txtSenha";
-        txtSenha.PasswordChar = '*';
+        txtSenha.PasswordChar = '•';
         txtSenha.Size = new Size(390, 29);
         txtSenha.TabIndex = 6;
         // 
