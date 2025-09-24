@@ -42,6 +42,7 @@ partial class FormLogin
         chkLembrar = new CheckBox();
         txtSenha = new TextBox();
         label2 = new Label();
+        btnCadastrar = new Button();
         topBar.SuspendLayout();
         pnlFormulario.SuspendLayout();
         SuspendLayout();
@@ -108,6 +109,7 @@ partial class FormLogin
         // 
         // pnlFormulario
         // 
+        pnlFormulario.Controls.Add(btnCadastrar);
         pnlFormulario.Controls.Add(btnEntrar);
         pnlFormulario.Controls.Add(chkLembrar);
         pnlFormulario.Controls.Add(txtSenha);
@@ -124,12 +126,13 @@ partial class FormLogin
         // btnEntrar
         // 
         btnEntrar.Anchor = AnchorStyles.None;
-        btnEntrar.Location = new Point(170, 417);
+        btnEntrar.Location = new Point(84, 417);
         btnEntrar.Name = "btnEntrar";
         btnEntrar.Size = new Size(80, 32);
         btnEntrar.TabIndex = 8;
         btnEntrar.Text = "Entrar";
         btnEntrar.UseVisualStyleBackColor = true;
+        btnEntrar.Click += btnEntrar_Click;
         // 
         // chkLembrar
         // 
@@ -161,6 +164,17 @@ partial class FormLogin
         label2.Size = new Size(53, 20);
         label2.TabIndex = 5;
         label2.Text = "Senha";
+        // 
+        // btnCadastrar
+        // 
+        btnCadastrar.Anchor = AnchorStyles.None;
+        btnCadastrar.Location = new Point(203, 417);
+        btnCadastrar.Name = "btnCadastrar";
+        btnCadastrar.Size = new Size(80, 32);
+        btnCadastrar.TabIndex = 9;
+        btnCadastrar.Text = "Cadastrar";
+        btnCadastrar.UseVisualStyleBackColor = true;
+        btnCadastrar.Click += CadastrarUsuario;
         // 
         // FormLogin
         // 
@@ -195,4 +209,5 @@ partial class FormLogin
     private TextBox txtSenha;
     private Label label2;
     private Button btnEntrar;
+    private Button btnCadastrar;
 }

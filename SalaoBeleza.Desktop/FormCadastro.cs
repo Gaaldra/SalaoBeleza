@@ -16,5 +16,10 @@ namespace SalaoBeleza.Desktop
         {
             InitializeComponent();
         }
+
+        private void FecharCadastro(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
