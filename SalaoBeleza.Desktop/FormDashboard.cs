@@ -16,5 +16,10 @@ namespace SalaoBeleza.Desktop
         {
             InitializeComponent();
         }
+
+        private void tblFormulario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
