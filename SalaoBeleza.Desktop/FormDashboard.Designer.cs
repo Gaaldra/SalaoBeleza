@@ -43,10 +43,12 @@
             pnlAgendamentos = new FlowLayoutPanel();
             lblAgendamentos = new Label();
             lblSubAgendamentos = new Label();
+            dgvDados = new DataGridView();
             tblDivisao.SuspendLayout();
             pnlAgendar.SuspendLayout();
             tblFormulario.SuspendLayout();
             pnlAgendamentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             SuspendLayout();
             // 
             // tblDivisao
@@ -204,6 +206,7 @@
             // 
             pnlAgendamentos.Controls.Add(lblAgendamentos);
             pnlAgendamentos.Controls.Add(lblSubAgendamentos);
+            pnlAgendamentos.Controls.Add(dgvDados);
             pnlAgendamentos.Dock = DockStyle.Fill;
             pnlAgendamentos.FlowDirection = FlowDirection.TopDown;
             pnlAgendamentos.Location = new Point(386, 0);
@@ -221,7 +224,7 @@
             lblAgendamentos.ForeColor = Color.White;
             lblAgendamentos.Location = new Point(23, 20);
             lblAgendamentos.Name = "lblAgendamentos";
-            lblAgendamentos.Size = new Size(338, 32);
+            lblAgendamentos.Size = new Size(820, 32);
             lblAgendamentos.TabIndex = 0;
             lblAgendamentos.Text = "Seus agendamentos";
             // 
@@ -233,9 +236,17 @@
             lblSubAgendamentos.ForeColor = Color.FromArgb(152, 149, 157);
             lblSubAgendamentos.Location = new Point(23, 52);
             lblSubAgendamentos.Name = "lblSubAgendamentos";
-            lblSubAgendamentos.Size = new Size(338, 21);
+            lblSubAgendamentos.Size = new Size(820, 21);
             lblSubAgendamentos.TabIndex = 1;
             lblSubAgendamentos.Text = "Consulte abaixo os seus últimos agendamentos";
+            // 
+            // dgvDados
+            // 
+            dgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDados.Location = new Point(23, 76);
+            dgvDados.Name = "dgvDados";
+            dgvDados.Size = new Size(820, 546);
+            dgvDados.TabIndex = 2;
             // 
             // FormDashboard
             // 
@@ -254,6 +265,7 @@
             tblFormulario.PerformLayout();
             pnlAgendamentos.ResumeLayout(false);
             pnlAgendamentos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).EndInit();
             ResumeLayout(false);
         }
 
@@ -274,5 +286,6 @@
         private FlowLayoutPanel pnlAgendamentos;
         private Label lblAgendamentos;
         private Label lblSubAgendamentos;
+        private DataGridView dgvDados;
     }
 }
