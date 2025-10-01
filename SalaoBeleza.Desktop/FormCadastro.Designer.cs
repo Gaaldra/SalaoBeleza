@@ -30,217 +30,271 @@
         {
             barraTopo = new Panel();
             btnVoltar = new Button();
-            label1 = new Label();
-            pnlFormulario = new Panel();
-            flowLayoutPanel4 = new FlowLayoutPanel();
-            label5 = new Label();
-            textBox3 = new TextBox();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            label2 = new Label();
+            lblTitulo = new Label();
+            lblConfirmarSenha = new Label();
+            txtConfirmarSenha = new TextBox();
+            lblSenha = new Label();
+            txtSenha = new TextBox();
+            lblEmail = new Label();
+            txtEmail = new TextBox();
+            lblNome = new Label();
             txtNome = new TextBox();
-            button1 = new Button();
+            btnCadastrar = new Button();
+            pnlDivisao = new TableLayoutPanel();
+            pnlFormulario = new TableLayoutPanel();
+            pnlNome = new TableLayoutPanel();
+            pnlEmail = new TableLayoutPanel();
+            pnlSenha = new TableLayoutPanel();
+            pnlConfirmarSenha = new TableLayoutPanel();
             barraTopo.SuspendLayout();
+            pnlDivisao.SuspendLayout();
             pnlFormulario.SuspendLayout();
-            flowLayoutPanel4.SuspendLayout();
-            flowLayoutPanel3.SuspendLayout();
-            flowLayoutPanel2.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            pnlNome.SuspendLayout();
+            pnlEmail.SuspendLayout();
+            pnlSenha.SuspendLayout();
+            pnlConfirmarSenha.SuspendLayout();
             SuspendLayout();
             // 
             // barraTopo
             // 
             barraTopo.Controls.Add(btnVoltar);
-            barraTopo.Controls.Add(label1);
+            barraTopo.Controls.Add(lblTitulo);
             barraTopo.Dock = DockStyle.Top;
-            barraTopo.Location = new Point(8, 8);
+            barraTopo.Location = new Point(12, 12);
+            barraTopo.Margin = new Padding(0, 0, 0, 12);
             barraTopo.Name = "barraTopo";
-            barraTopo.Size = new Size(484, 48);
+            barraTopo.Size = new Size(476, 48);
             barraTopo.TabIndex = 0;
             // 
             // btnVoltar
             // 
-            btnVoltar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            btnVoltar.Location = new Point(409, 11);
+            btnVoltar.Dock = DockStyle.Right;
+            btnVoltar.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
+            btnVoltar.Location = new Point(380, 0);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(72, 24);
+            btnVoltar.Size = new Size(96, 48);
             btnVoltar.TabIndex = 1;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
             btnVoltar.Click += FecharCadastro;
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.BackColor = Color.Transparent;
-            label1.Dock = DockStyle.Left;
-            label1.Font = new Font("Segoe Script", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(184, 149, 46);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(300, 48);
-            label1.TabIndex = 0;
-            label1.Text = "Beauty Hair";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Dock = DockStyle.Fill;
+            lblTitulo.Font = new Font("Segoe Script", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = Color.FromArgb(184, 149, 46);
+            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(476, 48);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Beauty Hair";
+            lblTitulo.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // pnlFormulario
+            // lblConfirmarSenha
             // 
-            pnlFormulario.AutoSize = true;
-            pnlFormulario.Controls.Add(flowLayoutPanel4);
-            pnlFormulario.Controls.Add(flowLayoutPanel3);
-            pnlFormulario.Controls.Add(flowLayoutPanel2);
-            pnlFormulario.Controls.Add(flowLayoutPanel1);
-            pnlFormulario.Dock = DockStyle.Top;
-            pnlFormulario.Location = new Point(8, 56);
-            pnlFormulario.Name = "pnlFormulario";
-            pnlFormulario.Size = new Size(484, 312);
-            pnlFormulario.TabIndex = 1;
+            lblConfirmarSenha.AutoSize = true;
+            lblConfirmarSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            lblConfirmarSenha.ForeColor = Color.FromArgb(178, 175, 182);
+            lblConfirmarSenha.Location = new Point(0, 0);
+            lblConfirmarSenha.Margin = new Padding(0, 0, 0, 8);
+            lblConfirmarSenha.Name = "lblConfirmarSenha";
+            lblConfirmarSenha.Size = new Size(162, 25);
+            lblConfirmarSenha.TabIndex = 0;
+            lblConfirmarSenha.Text = "Confirmar Senha";
             // 
-            // flowLayoutPanel4
+            // txtConfirmarSenha
             // 
-            flowLayoutPanel4.Controls.Add(label5);
-            flowLayoutPanel4.Controls.Add(textBox3);
-            flowLayoutPanel4.Dock = DockStyle.Top;
-            flowLayoutPanel4.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel4.Location = new Point(0, 234);
-            flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(484, 78);
-            flowLayoutPanel4.TabIndex = 3;
+            txtConfirmarSenha.Dock = DockStyle.Top;
+            txtConfirmarSenha.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtConfirmarSenha.Location = new Point(0, 33);
+            txtConfirmarSenha.Margin = new Padding(0);
+            txtConfirmarSenha.Name = "txtConfirmarSenha";
+            txtConfirmarSenha.Size = new Size(464, 29);
+            txtConfirmarSenha.TabIndex = 1;
             // 
-            // label5
+            // lblSenha
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(178, 175, 182);
-            label5.Location = new Point(0, 0);
-            label5.Margin = new Padding(0, 0, 0, 8);
-            label5.Name = "label5";
-            label5.Size = new Size(162, 25);
-            label5.TabIndex = 0;
-            label5.Text = "Confirmar Senha";
+            lblSenha.AutoSize = true;
+            lblSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            lblSenha.ForeColor = Color.FromArgb(178, 175, 182);
+            lblSenha.Location = new Point(0, 0);
+            lblSenha.Margin = new Padding(0, 0, 0, 8);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(66, 25);
+            lblSenha.TabIndex = 0;
+            lblSenha.Text = "Senha";
             // 
-            // textBox3
+            // txtSenha
             // 
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(0, 33);
-            textBox3.Margin = new Padding(0, 0, 0, 16);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(484, 29);
-            textBox3.TabIndex = 1;
+            txtSenha.Dock = DockStyle.Top;
+            txtSenha.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSenha.Location = new Point(0, 33);
+            txtSenha.Margin = new Padding(0);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.Size = new Size(464, 29);
+            txtSenha.TabIndex = 1;
             // 
-            // flowLayoutPanel3
+            // lblEmail
             // 
-            flowLayoutPanel3.Controls.Add(label4);
-            flowLayoutPanel3.Controls.Add(textBox2);
-            flowLayoutPanel3.Dock = DockStyle.Top;
-            flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel3.Location = new Point(0, 156);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(484, 78);
-            flowLayoutPanel3.TabIndex = 2;
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            lblEmail.ForeColor = Color.FromArgb(178, 175, 182);
+            lblEmail.Location = new Point(0, 0);
+            lblEmail.Margin = new Padding(0, 0, 0, 8);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(59, 25);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Email";
             // 
-            // label4
+            // txtEmail
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(178, 175, 182);
-            label4.Location = new Point(0, 0);
-            label4.Margin = new Padding(0, 0, 0, 8);
-            label4.Name = "label4";
-            label4.Size = new Size(66, 25);
-            label4.TabIndex = 0;
-            label4.Text = "Senha";
+            txtEmail.Dock = DockStyle.Top;
+            txtEmail.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtEmail.Location = new Point(0, 33);
+            txtEmail.Margin = new Padding(0);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(464, 29);
+            txtEmail.TabIndex = 1;
             // 
-            // textBox2
+            // lblNome
             // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(0, 33);
-            textBox2.Margin = new Padding(0, 0, 0, 16);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(484, 29);
-            textBox2.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Controls.Add(label3);
-            flowLayoutPanel2.Controls.Add(textBox1);
-            flowLayoutPanel2.Dock = DockStyle.Top;
-            flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel2.Location = new Point(0, 78);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(484, 78);
-            flowLayoutPanel2.TabIndex = 1;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(178, 175, 182);
-            label3.Location = new Point(0, 0);
-            label3.Margin = new Padding(0, 0, 0, 8);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 25);
-            label3.TabIndex = 0;
-            label3.Text = "Email";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(0, 33);
-            textBox1.Margin = new Padding(0, 0, 0, 16);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(484, 29);
-            textBox1.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            flowLayoutPanel1.Controls.Add(label2);
-            flowLayoutPanel1.Controls.Add(txtNome);
-            flowLayoutPanel1.Dock = DockStyle.Top;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.MinimumSize = new Size(484, 78);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(484, 78);
-            flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label2.ForeColor = Color.FromArgb(178, 175, 182);
-            label2.Location = new Point(0, 0);
-            label2.Margin = new Padding(0, 0, 0, 8);
-            label2.Name = "label2";
-            label2.Size = new Size(158, 25);
-            label2.TabIndex = 0;
-            label2.Text = "Nome Completo";
+            lblNome.AutoSize = true;
+            lblNome.BackColor = Color.Transparent;
+            lblNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            lblNome.ForeColor = Color.FromArgb(178, 175, 182);
+            lblNome.Location = new Point(0, 0);
+            lblNome.Margin = new Padding(0, 0, 0, 8);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(158, 25);
+            lblNome.TabIndex = 0;
+            lblNome.Text = "Nome Completo";
             // 
             // txtNome
             // 
-            txtNome.Font = new Font("Segoe UI", 12F);
+            txtNome.Dock = DockStyle.Top;
+            txtNome.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtNome.Location = new Point(0, 33);
-            txtNome.Margin = new Padding(0, 0, 0, 16);
+            txtNome.Margin = new Padding(0);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(484, 29);
+            txtNome.Size = new Size(464, 29);
             txtNome.TabIndex = 1;
             // 
-            // button1
+            // btnCadastrar
             // 
-            button1.Location = new Point(209, 616);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Cadastrar";
-            button1.UseVisualStyleBackColor = true;
+            btnCadastrar.AutoSize = true;
+            btnCadastrar.Dock = DockStyle.Bottom;
+            btnCadastrar.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            btnCadastrar.Location = new Point(12, 578);
+            btnCadastrar.Margin = new Padding(0);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(476, 40);
+            btnCadastrar.TabIndex = 2;
+            btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            // 
+            // pnlDivisao
+            // 
+            pnlDivisao.BackColor = Color.FromArgb(25, 24, 27);
+            pnlDivisao.ColumnCount = 1;
+            pnlDivisao.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlDivisao.Controls.Add(barraTopo, 0, 0);
+            pnlDivisao.Controls.Add(pnlFormulario, 0, 1);
+            pnlDivisao.Controls.Add(btnCadastrar, 0, 2);
+            pnlDivisao.Dock = DockStyle.Fill;
+            pnlDivisao.Location = new Point(0, 0);
+            pnlDivisao.Name = "pnlDivisao";
+            pnlDivisao.Padding = new Padding(12);
+            pnlDivisao.RowCount = 4;
+            pnlDivisao.RowStyles.Add(new RowStyle());
+            pnlDivisao.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            pnlDivisao.RowStyles.Add(new RowStyle());
+            pnlDivisao.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            pnlDivisao.Size = new Size(500, 650);
+            pnlDivisao.TabIndex = 3;
+            // 
+            // pnlFormulario
+            // 
+            pnlFormulario.ColumnCount = 1;
+            pnlFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlFormulario.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            pnlFormulario.Controls.Add(pnlNome, 0, 0);
+            pnlFormulario.Controls.Add(pnlEmail, 0, 1);
+            pnlFormulario.Controls.Add(pnlSenha, 0, 2);
+            pnlFormulario.Controls.Add(pnlConfirmarSenha, 0, 3);
+            pnlFormulario.Dock = DockStyle.Fill;
+            pnlFormulario.Location = new Point(15, 75);
+            pnlFormulario.Name = "pnlFormulario";
+            pnlFormulario.RowCount = 5;
+            pnlFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            pnlFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            pnlFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            pnlFormulario.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            pnlFormulario.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            pnlFormulario.Size = new Size(470, 500);
+            pnlFormulario.TabIndex = 2;
+            // 
+            // pnlNome
+            // 
+            pnlNome.ColumnCount = 1;
+            pnlNome.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlNome.Controls.Add(lblNome, 0, 0);
+            pnlNome.Controls.Add(txtNome, 0, 1);
+            pnlNome.Dock = DockStyle.Fill;
+            pnlNome.Location = new Point(3, 3);
+            pnlNome.Name = "pnlNome";
+            pnlNome.RowCount = 2;
+            pnlNome.RowStyles.Add(new RowStyle());
+            pnlNome.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            pnlNome.Size = new Size(464, 114);
+            pnlNome.TabIndex = 2;
+            // 
+            // pnlEmail
+            // 
+            pnlEmail.ColumnCount = 1;
+            pnlEmail.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlEmail.Controls.Add(lblEmail, 0, 0);
+            pnlEmail.Controls.Add(txtEmail, 0, 1);
+            pnlEmail.Dock = DockStyle.Fill;
+            pnlEmail.Location = new Point(3, 123);
+            pnlEmail.Name = "pnlEmail";
+            pnlEmail.RowCount = 2;
+            pnlEmail.RowStyles.Add(new RowStyle());
+            pnlEmail.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            pnlEmail.Size = new Size(464, 114);
+            pnlEmail.TabIndex = 2;
+            // 
+            // pnlSenha
+            // 
+            pnlSenha.ColumnCount = 1;
+            pnlSenha.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlSenha.Controls.Add(lblSenha, 0, 0);
+            pnlSenha.Controls.Add(txtSenha, 0, 1);
+            pnlSenha.Dock = DockStyle.Fill;
+            pnlSenha.Location = new Point(3, 243);
+            pnlSenha.Name = "pnlSenha";
+            pnlSenha.RowCount = 2;
+            pnlSenha.RowStyles.Add(new RowStyle());
+            pnlSenha.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            pnlSenha.Size = new Size(464, 114);
+            pnlSenha.TabIndex = 5;
+            // 
+            // pnlConfirmarSenha
+            // 
+            pnlConfirmarSenha.ColumnCount = 1;
+            pnlConfirmarSenha.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlConfirmarSenha.Controls.Add(lblConfirmarSenha, 0, 0);
+            pnlConfirmarSenha.Controls.Add(txtConfirmarSenha, 0, 1);
+            pnlConfirmarSenha.Dock = DockStyle.Fill;
+            pnlConfirmarSenha.Location = new Point(3, 363);
+            pnlConfirmarSenha.Name = "pnlConfirmarSenha";
+            pnlConfirmarSenha.RowCount = 2;
+            pnlConfirmarSenha.RowStyles.Add(new RowStyle());
+            pnlConfirmarSenha.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            pnlConfirmarSenha.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            pnlConfirmarSenha.Size = new Size(464, 114);
+            pnlConfirmarSenha.TabIndex = 4;
             // 
             // FormCadastro
             // 
@@ -248,46 +302,46 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(5, 5, 5);
             ClientSize = new Size(500, 650);
-            Controls.Add(pnlFormulario);
-            Controls.Add(barraTopo);
-            Controls.Add(button1);
+            Controls.Add(pnlDivisao);
+            ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormCadastro";
-            Padding = new Padding(8);
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormCadastro";
             barraTopo.ResumeLayout(false);
+            pnlDivisao.ResumeLayout(false);
+            pnlDivisao.PerformLayout();
             pnlFormulario.ResumeLayout(false);
-            pnlFormulario.PerformLayout();
-            flowLayoutPanel4.ResumeLayout(false);
-            flowLayoutPanel4.PerformLayout();
-            flowLayoutPanel3.ResumeLayout(false);
-            flowLayoutPanel3.PerformLayout();
-            flowLayoutPanel2.ResumeLayout(false);
-            flowLayoutPanel2.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
+            pnlNome.ResumeLayout(false);
+            pnlNome.PerformLayout();
+            pnlEmail.ResumeLayout(false);
+            pnlEmail.PerformLayout();
+            pnlSenha.ResumeLayout(false);
+            pnlSenha.PerformLayout();
+            pnlConfirmarSenha.ResumeLayout(false);
+            pnlConfirmarSenha.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Panel barraTopo;
-        private Label label1;
+        private Label lblTitulo;
         private Button btnVoltar;
-        private Panel pnlFormulario;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Label label2;
+        private Label lblNome;
         private TextBox txtNome;
-        private FlowLayoutPanel flowLayoutPanel4;
-        private Label label5;
-        private TextBox textBox3;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private Label label4;
-        private TextBox textBox2;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private Label label3;
-        private TextBox textBox1;
-        private Button button1;
+        private Label lblEmail;
+        private TextBox txtEmail;
+        private Label lblSenha;
+        private TextBox txtSenha;
+        private Label lblConfirmarSenha;
+        private TextBox txtConfirmarSenha;
+        private Button btnCadastrar;
+        private TableLayoutPanel pnlDivisao;
+        private TableLayoutPanel pnlFormulario;
+        private TableLayoutPanel pnlConfirmarSenha;
+        private TableLayoutPanel pnlSenha;
+        private TableLayoutPanel pnlEmail;
+        private TableLayoutPanel pnlNome;
     }
 }

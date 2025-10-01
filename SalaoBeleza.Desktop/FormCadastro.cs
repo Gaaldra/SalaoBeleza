@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace SalaoBeleza.Desktop;
 
-namespace SalaoBeleza.Desktop
+public partial class FormCadastro : Form
 {
-    public partial class FormCadastro : Form
+    public FormCadastro()
     {
-        public FormCadastro()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void FecharCadastro(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+    private void FecharCadastro(object sender, EventArgs e)
+    {
+        this.Close();
     }
 }
