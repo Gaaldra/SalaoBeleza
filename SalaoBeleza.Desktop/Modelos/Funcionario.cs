@@ -1,6 +1,6 @@
 ﻿namespace SalaoBeleza.Desktop.Modelos;
 
-internal class Funcionarios : Usuario
+internal class Funcionario: Usuario
 {
     public string Cargo { get; set; }
 }

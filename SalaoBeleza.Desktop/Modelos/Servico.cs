@@ -1,6 +1,6 @@
 ﻿namespace SalaoBeleza.Desktop.Modelos;
 
-internal class Servicos
+internal class Servico
 {
     public int ID { get; set; }
     public string Nome { get; set; }
