@@ -15,8 +15,6 @@ internal class UsuarioServicos
 
     public void AdicionarUsuario(Usuario usuario)
     {
-        try
-        {
             _contexto.Usuarios.Add(usuario);
             _contexto.SaveChanges();
             MessageBox.Show($"{usuario.NomeCompleto} foi adicionado com sucesso");

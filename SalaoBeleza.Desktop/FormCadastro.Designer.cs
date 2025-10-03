@@ -110,6 +110,7 @@
             txtConfirmarSenha.Location = new Point(0, 33);
             txtConfirmarSenha.Margin = new Padding(0);
             txtConfirmarSenha.Name = "txtConfirmarSenha";
+            txtConfirmarSenha.PasswordChar = '*';
             txtConfirmarSenha.Size = new Size(464, 29);
             txtConfirmarSenha.TabIndex = 1;
             // 
@@ -190,7 +191,7 @@
             btnCadastrar.Margin = new Padding(0);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(476, 40);
-            btnCadastrar.TabIndex = 2;
+            btnCadastrar.TabIndex = 3;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += CadastrarUsuario;
@@ -279,7 +280,7 @@
             pnlSenha.RowStyles.Add(new RowStyle());
             pnlSenha.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             pnlSenha.Size = new Size(464, 114);
-            pnlSenha.TabIndex = 5;
+            pnlSenha.TabIndex = 2;
             // 
             // pnlConfirmarSenha
             // 
@@ -309,6 +310,7 @@
             Name = "FormCadastro";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FormCadastro";
+            Activated += FormularioAtivado;
             barraTopo.ResumeLayout(false);
             pnlDivisao.ResumeLayout(false);
             pnlDivisao.PerformLayout();
