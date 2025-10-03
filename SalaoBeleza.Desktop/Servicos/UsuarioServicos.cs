@@ -19,6 +19,7 @@ internal class UsuarioServicos
         {
             _contexto.Usuarios.Add(usuario);
             _contexto.SaveChanges();
+            MessageBox.Show($"{usuario.NomeCompleto} foi adicionado com sucesso");
         }
         catch (DbUpdateConcurrencyException)
         {

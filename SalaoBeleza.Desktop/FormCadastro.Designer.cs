@@ -193,6 +193,7 @@
             btnCadastrar.TabIndex = 2;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += CadastrarUsuario;
             // 
             // pnlDivisao
             // 
