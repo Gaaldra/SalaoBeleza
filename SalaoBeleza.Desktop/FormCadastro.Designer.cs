@@ -310,7 +310,6 @@
             Name = "FormCadastro";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FormCadastro";
-            Activated += FormularioAtivado;
             barraTopo.ResumeLayout(false);
             pnlDivisao.ResumeLayout(false);
             pnlDivisao.PerformLayout();

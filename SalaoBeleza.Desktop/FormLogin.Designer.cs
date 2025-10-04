@@ -134,7 +134,6 @@ partial class FormLogin
         btnEntrar.TabIndex = 8;
         btnEntrar.Text = "Entrar";
         btnEntrar.UseVisualStyleBackColor = true;
-        btnEntrar.Click += btnEntrar_Click;
         // 
         // chkLembrar
         // 

@@ -1,3 +1,6 @@
+using SalaoBeleza.Desktop.Banco_de_Dados;
+using SalaoBeleza.Desktop.Servicos;
+
 namespace SalaoBeleza.Desktop;
 
 public partial class FormLogin : Form
@@ -12,13 +15,24 @@ public partial class FormLogin : Form
         this.Close();
     }
 
-    private void btnEntrar_Click(object sender, EventArgs e)
-    {
-
-    }
-
     private void CadastrarUsuario(object sender, EventArgs e)
     {
         new FormCadastro().ShowDialog();
+    }
+
+    private void AutenticarUsuario()
+    {
+        List<TextBox> campos = [txtEmail, txtSenha];
+        campos.ForEach(campo =>
+        {
+            if (String.IsNullOrWhiteSpace(campo.Text))
+            {
+                MessageBox.Show("Existem campos sem informação, preencha-os.", "Faltando informação");
+                return;
+            }
+        });
+
+        UsuarioServicos usuarioServicos = new(new SalaoBelezaContext());
+        usuarioServicos.ObterUsuario();
     }
 }

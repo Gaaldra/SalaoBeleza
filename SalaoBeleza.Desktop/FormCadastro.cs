@@ -12,11 +12,6 @@ public partial class FormCadastro : Form
         InitializeComponent();
     }
 
-    private void FormularioAtivado(object sender, EventArgs e)
-    {
-        txtNome.Focus();
-    }
-
     private void FecharCadastro(object sender, EventArgs e)
     {
         this.Close();

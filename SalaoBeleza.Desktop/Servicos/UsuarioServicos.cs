@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SalaoBeleza.Desktop.Banco_de_Dados;
+﻿using SalaoBeleza.Desktop.Banco_de_Dados;
 using SalaoBeleza.Desktop.Modelos;
 
 namespace SalaoBeleza.Desktop.Servicos;
@@ -15,17 +14,13 @@ internal class UsuarioServicos
 
     public void AdicionarUsuario(Usuario usuario)
     {
-            _contexto.Usuarios.Add(usuario);
-            _contexto.SaveChanges();
-            MessageBox.Show($"{usuario.NomeCompleto} foi adicionado com sucesso");
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            MessageBox.Show("Usuário não pode ser salvo no banco de dados");
-        }
-        catch (DbUpdateException)
-        {
-            MessageBox.Show("Erro ao salvar informações no banco de dados");
-        }
+        _contexto.Usuarios.Add(usuario);
+        _contexto.SaveChanges();
+        MessageBox.Show($"{usuario.NomeCompleto} foi adicionado com sucesso");
+    }
+
+    public void ObterUsuario()
+    {
+        _contexto.Usuarios.FirstOrDefault();
     }
 }
